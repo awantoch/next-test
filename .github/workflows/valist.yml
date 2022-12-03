@@ -24,11 +24,11 @@ jobs:
         run: echo "TIMESTAMP=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         
       - name: Valist Publish
-        uses: valist-io/valist-github-action@v2.3.1
+        uses: valist-io/valist-github-action@v2.6.2
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
-          account: webgame
-          project: fps
+          account: test0987-6
+          project: next-app
           release: ${{ env.TIMESTAMP }}
-          path: out
+          platform-web: out
         
